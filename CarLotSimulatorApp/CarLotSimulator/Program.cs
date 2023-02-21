@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace CarLotSimulator
 {
     class Program
@@ -12,7 +12,7 @@ namespace CarLotSimulator
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
-
+            Console.WriteLine(CarLot.numberOfCars);
 
             //Now that the Car class is created we can instanciate 3 new cars
             var femiCar = new Car();
@@ -23,15 +23,17 @@ namespace CarLotSimulator
             femiCar.HonkNoise = "beep";
 
             lot.Cars.Add(femiCar);
+            Console.WriteLine(CarLot.numberOfCars);
 
             var kemiCar = new Car("kia", "serento", 2014, "vroom", "beeep", true);
 
             lot.Cars.Add(kemiCar);
-
+            Console.WriteLine(CarLot.numberOfCars);
 
             var yemi = new Car("ford", "focus", 2011, "vrooom", "beeep", true);
 
             lot.Cars.Add(yemi);
+            Console.WriteLine($"{CarLot.numberOfCars}");
             //Set the properties for each of the cars
             //Call each of the methods for each car
             femiCar.MakeEngineNoise();
